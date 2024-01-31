@@ -1,0 +1,8 @@
+hebrew UTF-8 HTML decimal ranges
+Taamim:1425-1455
+Nekudot:1456-1479 
+Otiot:1488-1514
+
+
+links:
+https://stackoverflow.com/a/19156107
