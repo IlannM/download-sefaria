@@ -49,9 +49,12 @@ def removeChaptersHeadings(content):
         removed = False
         for i in range(0,len(content)):
             if content[i] == 'C':
+                magic_num = 11 # how many chars to remove
+                if content[i+10] == '\n':
+                    magic_num += 1
                 # leave a newline between chapters to calculate at runtime
                 # know the amount of chapters and verses
-                content = content[:i] + content[i+11:]
+                content = content[:i] + content[i+magic_num:]
                 removed = True
                 break
     return content
