@@ -49,8 +49,9 @@ def removeChaptersHeadings(content):
         removed = False
         for i in range(0,len(content)):
             if content[i] == 'C':
+                # print(ord(content[i+11]))
                 magic_num = 11 # how many chars to remove
-                if content[i+10] == '\n':
+                if content[i+11] == '\n':
                     magic_num += 1
                 
                 # # i hate everything
