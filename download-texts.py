@@ -55,12 +55,13 @@ def removeChaptersHeadings(content):
                     magic_num += 1
                 
                 # # i hate everything
-                # remove_newline = 0
-                # if content[i-3] == '\n':
-                #     remove_newline = 1
+                remove_newline = 0
+                if content[i-3] == '\n':
+                    print('yes')
+                    remove_newline = 1
                 # leave a newline between chapters to calculate at runtime
                 # know the amount of chapters and verses
-                content = content[:i] + content[i+magic_num:]
+                content = content[:i-remove_newline] + content[i+magic_num:]
                 removed = True
                 break
     return content
